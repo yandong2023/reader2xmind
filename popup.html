@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信读书笔记转思维导图</title>
+  <link rel="stylesheet" href="lib/jsmind.css">
+  <script src="lib/html2canvas.min.js"></script>
+  <style>
+    body {
+      width: 800px;
+      height: 600px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    button, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #notes-preview {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      overflow-y: auto;
+      margin-top: 10px;
+      padding: 5px;
+    }
+    #mindmap {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>微信读书笔记转思维导图</h1>
+  <button id="getNotesBtn">获取笔记内容</button>
+  <div id="notes-preview"></div>
+  <button id="generateMindmapBtn" disabled>生成思维导图</button>
+  <div id="mindmap"></div>
+  <select id="downloadFormat">
+    <option value="svg">SVG</option>
+    <option value="xmind">XMind</option>
+  </select>
+  <button id="downloadMindmapBtn" disabled>下载思维导图</button>
+  <script src="lib/jsmind.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
